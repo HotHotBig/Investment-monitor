@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			* {
+				margin: 0px 0px;
+				padding: 0;
+			}
+			a{
+				text-decoration: none;
+				color: black;
+			}
+			.center{
+				width: 1000px;
+				margin: 0 auto;
+			}
+			.center .head{
+				font-size: 22px;
+				font-weight: 700;
+				line-height: 70px;
+			}
+			.main{
+				border: 2px solid #535353;
+				padding: 20px;
+				box-sizing: border-box;
+			}
+			.main .title{
+				overflow: hidden;
+				margin-bottom: 25px;
+			}
+			.main .title .left{
+				float: left;
+				color:cornflowerblue;
+			}
+			.main .title .right{
+				float: right;
+				border-radius: 3px;
+				padding: 3px 8px;
+				color: #fff;
+				background: darkblue;
+			}
+			.main .row{
+				height: 45px;
+			}
+			.main .row .name,.main .row1 .name{
+				display: inline-block;
+				width: 160px;
+				text-align: right;
+				margin-right: 25px;
+			}
+			.main .row .name1{
+				width: 80px;
+				text-align: right;
+				display: inline-block;
+				margin-right: 26px;
+			}
+			.main .row .name3{
+				display: inline-block;
+				width: 180px;
+				text-align: right;
+				margin-right: 25px;
+			}
+			.main .row .name4{
+				display: inline-block;
+				width: 163px;
+				text-align: right;
+			}
+			.main .row .col1{
+				display: inline-block;
+				border: 1px solid #929290;
+				width: 450px;
+				height: 22px;
+				border-radius: 3px;
+				background: #E0E0E0;
+			}
+			.main .row input{
+				border: none;
+			}
+			.main .row input{
+				border: 1px solid #E0E0E0;
+				height: 22px;
+				text-indent: 1em;
+				border-radius: 3px;
+			}
+			.row .input1{
+				width: 760px;
+			}
+			.row .input2{
+				width: 280px;
+			}
+			.row select{
+				width: 122px;
+				border-radius: 3px;
+				height: 22px;
+			}
+			.row .input3{
+				width: 122px;
+			}
+			.row .input4{
+				width: 200px;
+				margin-right: 79px;
+			}
+			.row .input5{
+				width: 200px;
+			}
+			.row1 .name{
+				position: relative;
+				top: -80px;
+			}
+			textarea{
+				width: 760px;
+				height: 80px;
+				border-radius: 3px;
+				text-indent: 1em;
+				padding-top: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="center">
+			<div class="head">
+				新增项目页面
+			</div>
+			<div class="main">
+				<div class="title">
+					<div class="left">
+						<span>表单信息</span>
+						<span>证照信息</span>
+					</div>
+					<div class="right">
+						新增项目
+					</div>
+				</div>
+				<div class="content">
+					<div class="row">
+						<div class="name">管理级别</div>
+						<div class="col1">【00000000000】全国</div>
+					</div>
+					<div class="row">
+						<div class="name">单位名称</div>
+						<input type="text" class="input1" placeholder="单位"/>
+					</div>
+					<div class="row">
+						<div class="name">项目名称</div>
+						<input type="text" class="input1" placeholder="好项目"/>
+					</div>
+					<div class="row">
+						<div class="name">项目编码</div>
+						<input type="text" class="input2" placeholder="22"/>
+					</div>
+					<div class="row">
+						<div class="name">项目地址</div>
+						<input type="text" class="input1" placeholder="地址"/>
+					</div>
+					<div class="row">
+						<div class="name">单位法人代码</div>
+						<input type="text" class="input2" placeholder="22"/>
+						<div class="name">建设地址码</div>
+						<input type="text" class="input2" placeholder="22"/>
+					</div>
+					<div class="row">
+						<div class="name">建设性质</div>
+						<select name="">
+							<option value="新建项目">新建项目</option>
+						</select>
+						<div class="name">开工时间</div>
+						<input type="text" class="input3" placeholder="160202"/>
+						<div class="name">入库时间</div>
+						<input type="text" class="input3" placeholder="160202"/>
+					</div>
+					<div class="row">
+						<div class="name">行业编码</div>
+						<input type="text" class="input4" placeholder="22"/>
+						<div class="name">拟归属的十大产业编码</div>
+						<input type="text" class="input2" placeholder="22"/>
+					</div>
+					<div class="row">
+						<div class="name">民生项目</div>
+						<select name="">
+							<option value="否">否</option>
+							<option value="是">是</option>
+						</select>
+						<div class="name">财政项目</div>
+						<select name="">
+							<option value="否">否</option>
+							<option value="是">是</option>
+						</select>
+						<div class="name">省重点产业项目序号</div>
+						<input type="text" class="input3" placeholder="160202"/>
+					</div>
+					<div class="row">
+						<div class="name">计划总投资</div>
+						<input type="text" class="input3" placeholder="160202"/>
+						<div class="name1">万元</div>
+						<div class="name3">自开始建设累计完成投资</div>
+						<input type="text" class="input5" placeholder="160202"/>
+						<div class="name1">万元</div>
+					</div>
+					<div class="row">
+						<div class="name">自年初累积完成投资</div>
+						<input type="text" class="input3" placeholder="160202"/>
+						<div class="name1">万元</div>
+						<div class="name3">项目规划占地面积</div>
+						<input type="text" class="input3" placeholder="160202"/>
+						<div class="name4">平方米</div>
+					</div>
+					<div class="row">
+						<div class="name">项目联系人</div>
+						<input type="text" class="input2" placeholder="我"/>
+						<div class="name">联系人电话</div>
+						<input type="text" class="input2" placeholder="323222"/>
+					</div>
+					<div class="row1">
+						<div class="name">项目简介</div>
+						<textarea name="" rows="" cols="" placeholder="简介"></textarea>
+					</div>
+					<div class="row">
+						<div class="name">现场核实人</div>
+						<input type="text" class="input2" placeholder="我"/>
+						<div class="name">联系电话</div>
+						<input type="text" class="input2" placeholder="323222"/>
+					</div>
+					<div class="row">
+						<div class="name">核实日期</div>
+						<input type="text" class="input3" placeholder="核实日期"/>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

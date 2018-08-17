@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+	<head> <!-- 包含了文档的元（meta）数据 -->
+		<meta charset="utf-8"> <!-- 字符声明为UTF-8,以防出现中文乱码的情况 -->
+			<title>投资项目监测系统</title> <!-- 描述文档标题 -->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<style>
+			body {
+				padding-top: 0px;
+				padding-bottom: 20px;
+				font-family: "微软雅黑";
+				overflow:hidden !important;
+			}
+			.titleHead{
+				width: 100%;
+				height: 20px;
+				border:0px;
+			}
+			.col-md-3{
+				float:left;
+				border:1px solid #C4C2C7;
+				margin-left:45px;
+				width: 20%;
+				margin-top:-30px;
+				margin-bottom:0px;
+				text-align:center;
+				padding-top:5px;
+			}
+			div.thumbnail:hover{
+				/*background-color:#f7f8f8;*/
+				border-color: #86387b;
+				text-align:center;
+				/*padding-top:80px;*/
+			}
+			.caption {
+				text-align: center;
+				padding-top: 0px;
+			}
+		</style>
+	</head>
+
+	<!-- 只有<body>区域才会在浏览器中显示 -->
+	<body>
+
+		<div class="titleHead">
+			<a class="navbar-11">政府重点投资项目智能监控系统</a>
+			<div class="titleElse" style="float:right">
+				<from class="1">
+					<div class="form" style="display:inline-block;height: 20px;">
+						<input type="text" placeholder="用户名" title="请输入用户名">
+					</div>
+				</from>
+				<from class="2">
+					<div class="form" style="display:inline-block;height: 20px;">
+						<input type="text" placeholder="密码" title="请输入密码">
+					</div>
+				</from>
+				<from class="1">
+					<div class="form" style="display:inline-block;height: 20px;">
+						<button type="button" >登录</button>
+					</div>
+				</from>
+			</div>
+
+	<!-- banner 大图图标 -->
+		<div id="banner" class="" style="padding-top: 10px">
+			<img class="" src="data/image/dt.png" style="margin-bottom:45px;width:100%;" >
+		</div>
+
+		<!-- Example row of columns -->
+		<div class="container" id="bottom" style="display:table;width:100%;">
+			<div class="row"  >
+
+				<!-- 模块①：项目一览 -->
+				<div class="col-md-3">
+					<div class="thumbnail">
+						<img src="data/image/tb1.png" style="width: 80%;">
+						<div class="caption">
+							<h3><font style="color:#020000;">项目一览</font></h3>
+							<p><font style="color:#7e7d7d;">方便快捷地查看项目信息</font></p>
+							<p>
+								<!-- <a id='img-review' class="btn btn-primary disabled" href="pages/main.jsp?module=promListView" role="button">
+                                    进入模块 &raquo;
+                                </a> -->
+								<div class="btn-group">
+									<button type="button" onclick="location.href='project-scan.html'" style="width: 60px;height: 60px;border-radius: 50%;border: none;color:blue">ENTER</button>
+								</div>
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- 模块②：项目一览 -->
+				<div class="col-md-3">
+					<div class="thumbnail">
+						<img src="data/image/tb2.png" style="width: 80%;">
+						<div class="caption">
+							<h3><font style="color:#020000;">投资监测</font></h3>
+							<p><font style="color:#7e7d7d;">直观地查看项目进度情况</font></p>
+							<p>
+								<div class="btn-group">
+									<button type="button" onclick="location.href='visual.html'" style="width: 60px;height: 60px;border-radius: 50%;border: none;color:blue">ENTER</button>
+								</div>
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- 模块③：可视化分析 -->
+				<div class="col-md-3">
+					<div class="thumbnail">
+						<img src="data/image/tb3.png" style="width: 80%;">
+						<div class="caption">
+							<h3><font style="color:#020000;">可视化分析</font></h3>
+							<p><font style="color:#7e7d7d;">查看各年度、各行业的统计信息</font></p>
+							<p>
+								<div class="btn-group">
+									<button type="button" onclick="location.href='v-analysis.html'" style="width: 60px;height: 60px;border-radius: 50%;border: none;color:blue">ENTER</button>
+								</div>
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- 模块④：领导桌面 -->
+				<div class="col-md-3" >
+					<div class="thumbnail">
+						<img src="data/image/tb4.png" style="width: 80%;">
+						<div class="caption">
+							<h3><font style="color:#020000;">领导桌面</font></h3>
+							<p><font style="color:#7e7d7d;">领导桌面简介（待填）</font></p>
+							<p>
+								<div class="btn-group">
+									<button type="button" onclick="location.href='https://www.baidu.com/'" style="width: 60px;height: 60px;border-radius: 50%;border: none;color:blue" >ENTER</button>
+								</div>
+							</p>
+						</div>
+					</div>
+				</div>
+
+
+			</div>
+		</div>
+
+		<footer>
+			<ul class="footer-links" style="text-align:center;margin-top:20px;margin-bottom:-10;">
+				<li style="list-style: none">&copy; BUPT 2018</li>
+				<li style="list-style: none"><a href="help/WebHelp.pdf" target="_blank">帮助文档</a></li>
+			</ul>
+		</footer>
+
+
+	</body>
+	
+</html>

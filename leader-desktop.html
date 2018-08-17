@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html">
+    <title>领导桌面</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="lib/bootstrap.min.css">
+    <link rel="stylesheet" href="static/css/leaderDesktop.css">
+    <link rel="stylesheet" href="static/css/propress.css">
+    <script src="lib/echarts.js"></script>
+    <script src="lib/jquery3.3.1.js"></script>
+    <script src="lib/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        SGIS.Loader.load(["bootstrap3.plugin", "jquery", "iclient7C.js" ]);
+    </script>
+
+</head>
+<body>
+<div class="container" style="width:80%; margin-top: 10px;" >
+    <div class="row margin-2 row-size">
+        <div class="col-xs-4 col-sm-4 text-right no-margin">
+            <img alt="" src="data/image/left.png" class="cover">
+        </div>
+        <div class="col-xs-4 col-sm-4 text-center no-margin big-title">
+            <span class="color-white">贵安新区投资监管项目领导桌面</span>
+        </div>
+        <div class="col-xs-4 col-sm-4 text-left no-margin">
+            <img alt="" src="data/image/right.png"  class="cover">
+        </div>
+        <!--<div class="report-time-box" style="display:none;">
+            <ul class="nav nav-pills font-size-small nav-pills1">
+                <li class="color-white">报告期&nbsp;:&nbsp;</li>
+                <li>
+                    <div class="dropdown">
+                        <button type="button" class="btn dropdown-toggle btn-info btn-xs border-radius color-black report-year-btn" id="dropdownMenu0"
+                                data-toggle="dropdown">
+                            <span class="number">1</span>
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu border-radius report-year" role="menu" aria-labelledby="dropdownMenu0">
+
+                        </ul>
+                    </div>
+                </li>
+                <li class="color-white">年</li>
+                <li>
+                    <div class="dropdown">
+                        <button type="button" class="btn dropdown-toggle btn-info btn-xs border-radius color-black report-month-btn" id="dropdownMenu1"
+                                data-toggle="dropdown">
+                            <span class="number">1</span>
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu border-radius report-month" role="menu" aria-labelledby="dropdownMenu1">
+
+                        </ul>
+                    </div>
+                </li>
+                <li class="color-white">月</li>
+                <li>
+                    <div class="dropdown">
+                        <button type="button" class="btn dropdown-toggle btn-info btn-xs border-radius color-black report-day-btn" id="dropdownMenu2" data-toggle="dropdown">
+                            <span class="number">1</span>
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu border-radius report-day" role="menu" aria-labelledby="dropdownMenu2">
+
+                        </ul>
+                    </div>
+
+                </li>
+                <li class="color-white">周</li>
+                <li class="color-white">&nbsp;&nbsp;至今</li>
+            </ul>
+        </div>-->
+    </div>
+    <div class="row margin-1">
+        <!--指标概要 -->
+        <div class="col-xs-6 col-sm-6" style="width: 50%;height: 100%">
+            <div class="col-style" style="padding-bottom: 47px">
+                <div class="angle1"><img alt="" src="data/image/angle4.png"></div>
+                <div class="angle2"><img alt="" src="data/image/angle3.png"></div>
+                <div class="angle3"><img alt="" src="data/image/angle1.png"></div>
+                <div class="angle4"><img alt="" src="data/image/angle2.png"></div>
+                <div class="small-title">
+                    <span class="top">指标概要 </span>
+                </div>
+                <div class="cartogram-box">
+                    <div class="cartogram" id="indexes-completed-progress">
+                        <div data-to-value='50' data-items-count='32' id="p1BarPie" class="barPie barPie--radio">
+                            <span class="barPie__value">0</span>
+                            <div class="barPie__ring">
+                                <input type="radio" name="barPieRadioGroup" id="p1BarPieItem31" value="100" hidden="hidden" disabled=”true”/>
+                                <label for="p1BarPieItem31" class="barPie__ring__item"></label>
+                                <input type="radio" name="barPieRadioGroup" id="p1BarPieItem30" value="96.875" hidden="hidden" disabled=”true”/>
+                                <label for="p1BarPieItem30" class="barPie__ring__item"></label>
+                                <input type="radio" name="barPieRadioGroup" id="p1BarPieItem29" value="93.75" hidden="hidden" disabled=”true”/>
+                                <label for="p1BarPieItem29" class="barPie__ring__item"></label>
+                                <input type="radio" name="barPieRadioGroup" id="p1BarPieItem28" value="90.625" hidden="hidden" disabled=”true”/>
+                                <label for="p1BarPieItem28" class="barPie__ring__item"></label>
+                                <input type="radio" name="barPieRadioGroup" id="p1BarPieItem27" value="87.5" hidden="hidden" disabled=”true”/>
+                                <label for="p1BarPieItem27" class="barPie__ring__item"></label>
+                                <input type="radio" name="barPieRadioGroup" id="p1BarPieItem26" value="84.375" hidden="hidden" disabled=”true”/>
+                                <label for="p1BarPieItem26" class="barPie__ring__item"></label>
+                                <input type="radio" name="barPieRadioGroup" id="p1BarPieItem25" value="81.25" hidden="hidden" disabled=”true”/>
+                                <label for="p1BarPieItem25" class="barPie__ring__item"></label>
+                                <input type="radio" name="barPieRadioGroup" id="p1BarPieItem24" value="78.125" hidden="hidden" disabled=”true”/>
+                                <label for="p1BarPieItem24" class="barPie__ring__item"></label>
+                                <input type="radio" name="barPieRadioGroup" id="p1BarPieItem23" value="75" hidden="hidden" disabled=”true”/>
+                                <label for="p1BarPieItem23" class="barPie__ring__item"></label>
+                                <input type="radio" name="barPieRadioGroup" id="p1BarPieItem22" value="71.875" hidden="hidden" disabled=”true”/>
+                                <label for="p1BarPieItem22" class="barPie__ring__item"></label>
+                                <input type="radio" name="barPieRadioGroup" id="p1BarPieItem21" value="68.75" hidden="hidden" disabled=”true”/>
+                                <label for="p1BarPieItem21" class="barPie__ring__item"></label>
+                                <input type="radio" name="barPieRadioGroup" id="p1BarPieItem20" value="65.625" hidden="hidden" disabled=”true”/>
+                                <label for="p1BarPieItem20" class="barPie__ring__item"></label>
+                                <input type="radio" name="barPieRadioGroup" id="p1BarPieItem19" value="62.5" hidden="hidden" disabled=”true”/>
+                                <label for="p1BarPieItem19" class="barPie__ring__item"></label>
+                                <input type="radio" name="barPieRadioGroup" id="p1BarPieItem18" value="59.375" hidden="hidden" disabled=”true”/>
+                                <label for="p1BarPieItem18" class="barPie__ring__item"></label>
+                                <input type="radio" name="barPieRadioGroup" id="p1BarPieItem17" value="56.25" hidden="hidden" disabled=”true”/>
+                                <label for="p1BarPieItem17" class="barPie__ring__item"></label>
+                                <input type="radio" name="barPieRadioGroup" id="p1BarPieItem16" value="53.125" hidden="hidden" disabled=”true”/>
+                                <label for="p1BarPieItem16" class="barPie__ring__item"></label>
+                                <input type="radio" name="barPieRadioGroup" id="p1BarPieItem15" value="50" hidden="hidden" disabled=”true”/>
+                                <label for="p1BarPieItem15" class="barPie__ring__item"></label>
+                                <input type="radio" name="barPieRadioGroup" id="p1BarPieItem14" value="46.875" hidden="hidden" disabled=”true”/>
+                                <label for="p1BarPieItem14" class="barPie__ring__item"></label>
+                                <input type="radio" name="barPieRadioGroup" id="p1BarPieItem13" value="43.75" hidden="hidden" disabled=”true”/>
+                                <label for="p1BarPieItem13" class="barPie__ring__item"></label>
+                                <input type="radio" name="barPieRadioGroup" id="p1BarPieItem12" value="40.625" hidden="hidden" disabled=”true”/>
+                                <label for="p1BarPieItem12" class="barPie__ring__item"></label>
+                                <input type="radio" name="barPieRadioGroup" id="p1BarPieItem11" value="37.5" hidden="hidden" disabled=”true”/>
+                                <label for="p1BarPieItem11" class="barPie__ring__item"></label>
+                                <input type="radio" name="barPieRadioGroup" id="p1BarPieItem10" value="34.375" hidden="hidden" disabled=”true”/>
+                                <label for="p1BarPieItem10" class="barPie__ring__item"></label>
+                                <input type="radio" name="barPieRadioGroup" id="p1BarPieItem9" value="31.25" hidden="hidden" disabled=”true”/>
+                                <label for="p1BarPieItem9" class="barPie__ring__item"></label>
+                                <input type="radio" name="barPieRadioGroup" id="p1BarPieItem8" value="28.125" hidden="hidden" disabled=”true”/>
+                                <label for="p1BarPieItem8" class="barPie__ring__item"></label>
+                                <input type="radio" name="barPieRadioGroup" id="p1BarPieItem7" value="25" hidden="hidden" disabled=”true”/>
+                                <label for="p1BarPieItem7" class="barPie__ring__item"></label>
+                                <input type="radio" name="barPieRadioGroup" id="p1BarPieItem6" value="21.875" hidden="hidden" disabled=”true”/>
+                                <label for="p1BarPieItem6" class="barPie__ring__item"></label>
+                                <input type="radio" name="barPieRadioGroup" id="p1BarPieItem5" value="18.75" hidden="hidden" disabled=”true”/>
+                                <label for="p1BarPieItem5" class="barPie__ring__item"></label>
+                                <input type="radio" name="barPieRadioGroup" id="p1BarPieItem4" value="15.625" hidden="hidden" disabled=”true”/>
+                                <label for="p1BarPieItem4" class="barPie__ring__item"></label>
+                                <input type="radio" name="barPieRadioGroup" id="p1BarPieItem3" value="12.5" hidden="hidden" disabled=”true”/>
+                                <label for="p1BarPieItem3" class="barPie__ring__item"></label>
+                                <input type="radio" name="barPieRadioGroup" id="p1BarPieItem2" value="9.375" hidden="hidden" disabled=”true”/>
+                                <label for="p1BarPieItem2" class="barPie__ring__item"></label>
+                                <input type="radio" name="barPieRadioGroup" id="p1BarPieItem1" value="6.25" hidden="hidden" disabled=”true”/>
+                                <label for="p1BarPieItem1" class="barPie__ring__item"></label>
+                                <input type="radio" name="barPieRadioGroup" id="p1BarPieItem0" value="3.125" hidden="hidden" disabled=”true”/>
+                                <label for="p1BarPieItem0" class="barPie__ring__item"></label>
+                            </div>
+                        </div>
+
+                        <span class="indexes-cartogram-name color-blue margin-3">完成进度</span>
+                    </div>
+                    <div class="cartogram" id="indexes-cartogram1"><img src="data/image/indicators-a.png"/><span class="indexes-cartogram-number">10</span><span class="indexes-cartogram-name font-medium">项目数</span></div>
+                    <div class="cartogram" id="indexes-cartogram2"><img src="data/image/indicators-t.png"/><span class="indexes-cartogram-number">20</span><span class="indexes-cartogram-name font-medium">计划总投资</span></div>
+                    <div class="cartogram" id="indexes-cartogram3"><img src="data/image/indicators-w-3.png"/><span class="indexes-cartogram-number">500</span><span class="indexes-cartogram-name font-medium">开始建设累计投资</span></div>
+                    <div class="cartogram" id="indexes-cartogram4"><img src="data/image/indicators-w-1.png"/><span class="indexes-cartogram-number">1000</span><span class="indexes-cartogram-name font-medium">本年完成投资</span></div>
+                    <div class="cartogram" id="indexes-cartogram5"><img src="data/image/indicators-w-2.png"/><span class="indexes-cartogram-number">50</span><span class="indexes-cartogram-name font-medium">本周完成投资</span></div>
+                </div>
+            </div>
+        </div>
+        <!--区域分析 -->
+        <div class="col-xs-6 col-sm-6 " style="width: 50%;height: 100%" >
+            <div class="col-style" style="">
+                <div class="angle1"><img alt="" src="data/image/angle4.png"></div>
+                <div class="angle2"><img alt="" src="data/image/angle3.png"></div>
+                <div class="angle3"><img alt="" src="data/image/angle1.png"></div>
+                <div class="angle4"><img alt="" src="data/image/angle2.png"></div>
+                <div class="small-title">
+                    <span class="top">区域分析</span>
+                </div>
+                <div id="map-container" style="width: 100%;height: 100%;" >
+                    <div style=""> <img src="data/image/chinamap.png"></div>
+                </div>
+            </div>
+        </div>
+        <!-- 行业分析 -->
+        <div class="col-xs-6 col-sm-6 " style="width: 50%;height: 100%;margin-top: 8px;">
+            <div class="col-style">
+                <div class="angle1"><img alt="" src="data/image/angle4.png"></div>
+                <div class="angle2"><img alt="" src="data/image/angle3.png"></div>
+                <div class="angle3"><img alt="" src="data/image/angle1.png"></div>
+                <div class="angle4"><img alt="" src="data/image/angle2.png"></div>
+                <div class="small-title">
+                    <span class="top">行业分析 </span>
+                </div>
+                <div style="width: 100%;height:90%;margin-top: 30px;">
+                        <div id="echartsBar" style="width: 600px;height:400px;">
+                            <html >
+                            <head>
+                                <meta charset="utf-8">
+                            </head>
+                            <body style="height: 100%; margin: 0">
+                            <div id="containerbar" style="height: 100%"></div>
+                            <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts.min.js"></script>
+                            <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-gl/echarts-gl.min.js"></script>
+                            <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-stat/ecStat.min.js"></script>
+                            <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.min.js"></script>
+                            <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
+                            <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"></script>
+                            <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=ZUONbpqGBsYGXNIYHicvbAbM"></script>
+                            <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"></script>
+                            <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/simplex.js"></script>
+                            <script type="text/javascript">
+                                var dom = document.getElementById("containerbar");
+                                var myChart = echarts.init(dom);
+                                option1 = null;
+                                option1 = {
+
+                                    tooltip: {
+                                        trigger: 'axis',
+                                        axisPointer: {
+                                            type: 'shadow'
+                                        }
+                                    },
+                                    grid: {
+                                        show:false,
+                                        left: '3%',
+                                        right: '4%',
+                                        bottom: '3%',
+                                        containLabel: true
+                                    },
+                                    xAxis: {
+                                        type: 'value',
+                                        boundaryGap: [0, 0.01],
+                                        splitLine:{
+                                            show:false
+                                        },
+                                        axisLabel:{
+                                            color:'#fee388',
+                                            textStyle:{
+                                                fontSize:'14',
+                                            }
+
+                                        },
+                                    },
+                                    yAxis: {
+                                        type: 'category',
+                                        fontWeight:'bolder',
+                                        axisLabel:{
+                                            interval:0,
+                                            rotate:30,
+                                            color:'#fee388',
+                                            textStyle:{
+                                                fontSize:'14',
+                                            }
+                                        },
+                                        data: ['总计','批发和零售业','建筑业','电力、热力和燃气生产和供应业',
+                                            '制造业','采矿业','农、林、牧、渔业']
+                                    },
+                                    series: [
+                                        {
+                                            name: '2011年',
+                                            type: 'bar',
+                                            data: [533, 89, 34, 70, 44,66, 230]
+                                        }
+                                    ]
+                                };
+                                ;
+                                myChart.setOption(option1, true);
+                            </script>
+                            </body>
+                            </html>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <!--多期对比 -->
+        <div class="col-xs-6 col-sm-6 margin-2" >
+            <div class="col-style">
+                <div class="angle1"><img alt="" src="data/image/angle4.png"></div>
+                <div class="angle2"><img alt="" src="data/image/angle3.png"></div>
+                <div class="angle3"><img alt="" src="data/image/angle1.png"></div>
+                <div class="angle4"><img alt="" src="data/image/angle2.png"></div>
+                <div class="small-title">
+                    <span class="top">多期对比 </span>
+                </div>
+                <html style="height: 100%">
+                <head>
+                    <meta charset="utf-8">
+                </head>
+                <body style="height: 100%; ">
+                <div id="container" style="height: 430px;width: 600px"></div>
+                <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts.min.js"></script>
+                <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-gl/echarts-gl.min.js"></script>
+                <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-stat/ecStat.min.js"></script>
+                <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.min.js"></script>
+                <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
+                <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"></script>
+                <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=ZUONbpqGBsYGXNIYHicvbAbM"></script>
+                <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"></script>
+                <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/simplex.js"></script>
+                <script type="text/javascript">
+                    var dom = document.getElementById("container");
+                    var myChart = echarts.init(dom);
+                    var app = {};
+                    option = null;
+
+                    data = [["2000-06-05",116],["2000-06-06",129],["2000-06-07",135],["2000-06-08",86],["2000-06-09",73],["2000-06-10",85],["2000-06-11",73],["2000-06-12",68],["2000-06-13",92],["2000-06-14",130],["2000-06-15",245],["2000-06-16",139],["2000-06-17",115],["2000-06-18",111],["2000-06-19",309],["2000-06-20",206],["2000-06-21",137],["2000-06-22",128],["2000-06-23",85],["2000-06-24",94],["2000-06-25",71],["2000-06-26",106],["2000-06-27",84],["2000-06-28",93],["2000-06-29",85],["2000-06-30",73],["2000-07-01",83],["2000-07-02",125],["2000-07-03",107],["2000-07-04",82],["2000-07-05",44],["2000-07-06",72],["2000-07-07",106],["2000-07-08",107],["2000-07-09",66],["2000-07-10",91],["2000-07-11",92],["2000-07-12",113],["2000-07-13",107],["2000-07-14",131],["2000-07-15",111],["2000-07-16",64],["2000-07-17",69],["2000-07-18",88],["2000-07-19",77],["2000-07-20",83],["2000-07-21",111],["2000-07-22",57],["2000-07-23",55],["2000-07-24",60]];
+
+                    var dateList = data.map(function (item) {
+                        return item[0];
+                    });
+                    var valueList = data.map(function (item) {
+                        return item[1];
+                    });
+
+                    option = {
+
+                        // Make gradient line here
+                        visualMap: [{
+                            show: false,
+                            type: 'continuous',
+                            seriesIndex: 0,
+                            min: 0,
+                            max: 400
+                        }, {
+                            show: false,
+                            type: 'continuous',
+                            seriesIndex: 1,
+                            dimension: 0,
+                            min: 0,
+                            max: dateList.length - 1
+                        }],
+
+                        dataZoom:[{}],
+                        title: [{
+                            left: 'center',
+
+                        }],
+                        tooltip: {
+                            trigger: 'axis'
+                        },
+                        xAxis: [{
+                            data: dateList,
+                            axisLabel:{
+                                textStyle:{
+                                    fontSize:'12',
+                                }
+                            },
+
+                        }],
+                        yAxis: [{
+                            splitLine: {show: false},
+                            axisLabel:{
+                                textStyle:{
+                                    fontSize:'12',
+                                }
+                            },
+                        }],
+                        grid: [{
+                            bottom: '30%'
+                        }],
+                        series: [{
+                            type: 'line',
+                            showSymbol: false,
+                            data: valueList
+                        }]
+                    };;
+                    if (option && typeof option === "object") {
+                        myChart.setOption(option, true);
+                    }
+                </script>
+                </body>
+                </html>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+<script src="static/js/table.config.js"></script>
+<script src='static/js/stopExecutionOnTimeout.js'></script>
+<script src='static/js/doIn.js'></script>
+<script src='static/js/progress.js'></script>
+<script src="static/js/leaderDesktop.js"></script>
+<script src="static/js/leaderDesktopFake.js"></script>
+<script src="static/js/map.analyse.js"></script>>
+<script src="lib/bootstrap.min.js"></script>
+
+</html>

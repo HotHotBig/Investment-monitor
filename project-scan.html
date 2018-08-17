@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>项目一览</title>
+		<link rel="stylesheet" href="lib/bootstrap.min.css"/>
+		<script type="text/javascript" src="lib/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="static/css/project_scan.css" />
+	</head>
+
+	<body>
+		<!----------------------头部导航----------------------->
+	<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	    <div class="navbar-header">
+	        <a class="navbar-brand" href="index.html">政府重点投资项目智能监控系统 </a>
+	    </div>
+	    <div class="collapse navbar-collapse ">
+	        <ul class="nav navbar-nav module-menu">
+	            <li class="active">
+	                <a href="project-scan.html" id="overview">项目一览</a>
+	            </li>
+	            <li class="">
+	                <a href="visual.html" id="visual">投资监测</a>
+	            </li>
+	            <li class="">
+	                <a href="v-index.html" id="visualAnalysis">可视化分析</a>
+	            </li>
+	            <li class="">
+	                <a href="#" id="proInfoService">领导桌面</a>
+	            </li>
+	        </ul>
+	    </div>
+	</div>
+		<div class="position">
+			<div class="left">
+				<span class="list">工程项目列表</span>
+				<span class="status">工程状态：</span>
+				<select name="" id="select">
+					<option value="全部">全部</option>
+					<option value="已通过审核">已通过审核</option>
+					<option value="未通过审核">未通过审核</option>
+					<option value="未审核">未审核</option>
+				</select>
+				<span class="search"><input type="text" /><span><img src="img/search.png" alt="" /></span></span>
+                <span id="hidden"></span>
+                <span class="gaoji">高级搜索<img src="img/1.png" alt="" />
+                	<div class="sousuo">
+                		<div class="toubu" id="toubu">
+                			条件筛选  <span id="close">X</span>
+                		</div>
+                		<div id="zhongbu">关注度 <span class="all">全部</span>
+                			<input type="checkbox" /> 100万以上
+                			<input type="checkbox" /> 200万以上
+                		</div>
+                		<div class="footers" id="dibu">
+                			<span>搜索</span><span>清空搜索条件</span>
+                		</div>
+                	</div>
+                </span>
+			</div>
+			<div class="right">
+				<a href="add-project.html" class="gray-border add">项目填报</a>
+				<div class="gray-border none">项目编辑</div>
+				<div class="gray-border none">项目查看</div>
+				<div class="gray-border none">项目审核</div>
+			</div>
+		</div>
+		<div class="table-wrap">
+			<table class="table" cellpadding="0" cellspacing="0">
+				<tr>
+					<th>区划代码</th>
+					<th>区划名称</th>
+					<th>项目（单位）名称</th>
+					<th>建设类型</th>
+					<th>计划总投资<br/>(万元)</th>
+					<th>项目（法人）码</th>
+					<th>项目入库状态</th>
+					<th>申报时间</th>
+					<th>最后上报时间</th>
+					<th>法人单位名称</th>
+					<th>联系人</th>
+					<th>联系方式</th>
+				</tr>
+				<tr class="tr tr1 already">
+					<td class="td">5001090000000</td>
+					<td class="td">北碚区</td>
+					<td class="td">中国电信</td>
+					<td class="td">新建项目</td>
+					<td class="td">0</td>
+					<td class="td">x</td>
+					<td class="td">已通过审核</td>
+					<td class="td">2015</td>
+					<td class="td">2015年11月</td>
+					<td class="td">水土公司</td>
+					<td class="td">x</td>
+					<td class="td">x</td>
+				</tr>
+				<tr class="tr tr1 no">
+					<td class="td">5001090000000</td>
+					<td class="td">北碚区</td>
+					<td class="td">中国电信</td>
+					<td class="td">新建项目</td>
+					<td class="td">0</td>
+					<td class="td">x</td>
+					<td class="td">未通过审核</td>
+					<td class="td">2015</td>
+					<td class="td">2015年11月</td>
+					<td class="td">x</td>
+					<td class="td">x</td>
+					<td class="td">x</td>
+				</tr>
+				<tr class="tr tr1 no">
+					<td class="td">5001090000000</td>
+					<td class="td">哈尔滨市</td>
+					<td class="td">中国电信</td>
+					<td class="td">新建项目</td>
+					<td class="td">0</td>
+					<td class="td">x</td>
+					<td class="td">未通过审核</td>
+					<td class="td">2015</td>
+					<td class="td">2015年11月</td>
+					<td class="td">中国电信云计算重庆基地项目</td>
+					<td class="td">王先生</td>
+					<td class="td">18811396010</td>
+				</tr>
+				<tr class="tr tr1 already">
+					<td class="td">5001090000000</td>
+					<td class="td">北碚区</td>
+					<td class="td">中国电信</td>
+					<td class="td">新建项目</td>
+					<td class="td">0</td>
+					<td class="td">x</td>
+					<td class="td">已通过审核</td>
+					<td class="td">2015</td>
+					<td class="td">2015年11月</td>
+					<td class="td">x</td>
+					<td class="td">x</td>
+					<td class="td">x</td>
+				</tr>
+				<tr class="tr tr1 already">
+					<td class="td">5001090000000</td>
+					<td class="td">北碚区</td>
+					<td class="td">中国电信</td>
+					<td class="td">新建项目</td>
+					<td class="td">0</td>
+					<td class="td">x</td>
+					<td class="td">已通过审核</td>
+					<td class="td">2015</td>
+					<td class="td">2015年11月</td>
+					<td class="td">x</td>
+					<td class="td">x</td>
+					<td class="td">x</td>
+				</tr>
+				<tr class="tr tr1 no">
+					<td class="td">5001090000000</td>
+					<td class="td">北碚区</td>
+					<td class="td">中国电信</td>
+					<td class="td">新建项目</td>
+					<td class="td">0</td>
+					<td class="td">x</td>
+					<td class="td">未通过审核</td>
+					<td class="td">2015</td>
+					<td class="td">2015年11月</td>
+					<td class="td">金泉大厦项目</td>
+					<td class="td">x</td>
+					<td class="td">x</td>
+				</tr>
+				<tr class="tr tr1 no">
+					<td class="td">5001090000000</td>
+					<td class="td">北碚区</td>
+					<td class="td">中国电信</td>
+					<td class="td">新建项目</td>
+					<td class="td">0</td>
+					<td class="td">x</td>
+					<td class="td">未通过审核</td>
+					<td class="td">2015</td>
+					<td class="td">2015年11月</td>
+					<td class="td">x</td>
+					<td class="td">x</td>
+					<td class="td">x</td>
+				</tr>
+				<tr class="tr tr1 already">
+					<td class="td">5001090000000</td>
+					<td class="td">北碚区</td>
+					<td class="td">中国电信</td>
+					<td class="td">新建项目</td>
+					<td class="td">0</td>
+					<td class="td">x</td>
+					<td class="td">已通过审核</td>
+					<td class="td">2015</td>
+					<td class="td">2015年11月</td>
+					<td class="td">x</td>
+					<td class="td">x</td>
+					<td class="td">x</td>
+				</tr>
+				<tr class="tr tr1 already">
+					<td class="td">5001090000000</td>
+					<td class="td">北碚区</td>
+					<td class="td">中国电信</td>
+					<td class="td">新建项目</td>
+					<td class="td">0</td>
+					<td class="td">x</td>
+					<td class="td">已通过审核</td>
+					<td class="td">2015</td>
+					<td class="td">2015年11月</td>
+					<td class="td">x</td>
+					<td class="td">x</td>
+					<td class="td">x</td>
+				</tr>
+			</table>
+		</div>
+		<div class="page">
+			<span>1/10 共100条</span>
+			<button>上一页</button>
+			<button>下一页</button>
+		</div>
+		<script src="lib/jquery3.3.1.js"></script>
+		<script>
+			var selects = document.getElementById("select");
+			var nones = document.getElementsByClassName("none");
+			var already = document.getElementsByClassName("already");
+			var no = document.getElementsByClassName("no");
+			var gaoji = document.getElementsByClassName("gaoji")[0];
+			var sousuo = document.getElementsByClassName("sousuo")[0];
+			var close=document.getElementById("close");
+			var hidden=document.getElementById("hidden");
+			var tr1 = document.getElementsByClassName("tr1");
+			close.onclick=function(){
+				sousuo.style.display="none";
+			}
+			hidden.onclick=function(){
+				sousuo.style.display="block";
+			}
+			
+			selects.onclick=function(){
+				if(selects.value==='已通过审核'){
+					for(var i=0;i<no.length;i++){
+						no[i].className="tr tr1 no active";
+					}
+					for(var i=0;i<already.length;i++){
+						already[i].className="tr tr1 already";
+					}
+				}
+			    else if(selects.value==='未通过审核'){
+			    	for(var i=0;i<no.length;i++){
+						no[i].className="tr tr1 no";
+					}
+			    	for(var i=0;i<already.length;i++){
+						already[i].className="tr tr1 already active";
+					}
+			    }
+			    else{
+			    	for(var i=0;i<no.length;i++){
+						no[i].className="tr tr1 no";
+					}
+			    	for(var i=0;i<already.length;i++){
+						already[i].className="tr tr1 already";
+					}
+			    }
+			}
+
+			/*获取样式*/
+			function getStyle(obj, attr) 
+			{ 
+				if(obj.currentStyle) 
+				{ 
+					return obj.currentStyle[attr]; 
+				} 
+				else 
+				{ 
+					return getComputedStyle(obj,false)[attr]; 
+				} 
+			} 
+			
+			for(var k=0;k<already.length;k++){
+				(function(i){
+					var acount=true;
+					    
+						already[i].ondblclick=function(){
+							if(acount){
+								$(".tr1:even").css('background','#fff');
+								$(".tr1:odd").css('background','lightblue');
+								this.style.background="#FFEE27";
+								nones[1].style.color="#000";
+							nones[1].style.cursor="pointer";
+							nones[0].style.color="darkgray";
+							nones[0].style.cursor="default";
+							nones[2].style.color="darkgray";
+							nones[2].style.cursor="default";
+							acount=false;
+								acount=false;
+							}else{
+								$(".tr1:even").css('background','#fff');
+								$(".tr1:odd").css('background','lightblue');
+								for(var j=0;j<nones.length;j++){
+									nones[j].style.color="darkgray";
+									nones[j].style.cursor="default";
+								}
+								acount=true;
+							}
+						
+						}
+				})(k);
+			}	
+				for(var k=0;k<no.length;k++){
+				(function(i){
+					var acount=true;
+					    
+						no[i].ondblclick=function(){
+							if(acount){
+							$(".tr1:even").css('background','#fff');
+							$(".tr1:odd").css('background','lightblue');
+							this.style.background="#FFEE27";
+							for(var j=0;j<nones.length;j++){
+									nones[j].style.color="#000";
+									nones[j].style.cursor="pointer";
+								}
+							
+						  }
+						else{
+							$(".tr1:even").css('background','#fff');
+								$(".tr1:odd").css('background','lightblue');
+								for(var j=0;j<nones.length;j++){
+									nones[j].style.color="darkgray";
+									nones[j].style.cursor="default";
+								}
+							acount=true;
+							}
+						
+					    }
+					
+				})(k);
+			}
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        html {
+            height: 100%
+        }
+
+        body {
+            height: 100%;
+            margin: 0px;
+            padding: 0px
+        }
+
+        .search{
+            height: 66px;
+            width: 100%;
+            margin-top: 60px;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+        }
+
+        .searchBtn {
+            width: 100px;
+            margin-right: 10px;
+        }
+
+        #baidu_map,.content {
+            height: 77%
+        }
+
+        .modal-fieldset{
+            padding: 10px;
+            margin: 10px;
+            border: #cccccc solid 1px;
+        }
+        .navbar-nav>.active>a{
+            background-color: #16a085 !important;
+        }
+        .navbar-brand,.navbar-nav>li>a{
+            color: #fff !important;
+        }
+    </style>
+    <link rel="stylesheet" href="lib/bootstrap.min.css">
+    <link rel="stylesheet" href="static/css/map.css">
+    <script src="lib/jquery3.3.1.js"></script>
+    <script type="text/javascript"
+            src="http://api.map.baidu.com/api?v=2.0&ak=s5op0rBri8h6EBYCYoEREAZ3OQRrMKME"></script>
+    <script src="lib/echarts.js"></script>
+    <script src="lib/bmap.js"></script>
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="index.html">政府重点投资项目智能监控系统 </a>
+        </div>
+        <div class="collapse navbar-collapse ">
+            <ul class="nav navbar-nav module-menu">
+                <li class="active">
+                    <a href="project-scan.html" id="overview">项目一览</a>
+                </li>
+                <li class="">
+                    <a href="visual.html" id="visual">投资监测</a>
+                </li>
+                <li class="">
+                    <a href="v-analysis.html" id="visualAnalysis">可视化分析</a>
+                </li>
+                <li class="">
+                    <a href="#" id="proInfoService">领导桌面</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+<div class="search">
+    <select id="type" class="btn btn-default searchBtn">
+        <option value="month">月报</option>
+        <option value="year">年报</option>
+    </select>
+    <select id="state" class="btn btn-default searchBtn">
+        <option value="1">全部</option>
+        <option value="2">未开始</option>
+        <option value="3">未审核</option>
+        <option value="4">已审核</option>
+        <option value="5">未通过</option>
+    </select>
+    <select id="month" class="btn btn-default searchBtn">
+        <option value="1">1月</option>
+        <option value="2">2月</option>
+        <option value="3">3月</option>
+        <option value="4">4月</option>
+        <option value="5">5月</option>
+        <option value="6">6月</option>
+        <option value="7">7月</option>
+        <option value="8">8月</option>
+        <option value="9">9月</option>
+        <option value="10">10月</option>
+        <option value="11">11月</option>
+        <option value="12">12月</option>
+    </select>
+    <input type="text" class="searchBtn form-control" style="width: 300px" id="name" placeholder="项目名称">
+    <button type="button" class="btn btn-default searchBtn" onclick="query()">查询</button>
+    <button type="button" class="btn btn-default searchBtn" data-toggle="modal" data-target="#myModal">筛选</button>
+    <!-- 模态框（Modal） -->
+    <div class="modal fade" id="myModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+
+                    <h3 class="modal-title pull-left" id="myModalLabel">
+                        筛选
+                    </h3>
+                    <button type="button" class="close" tabindex="-1" data-dismiss="modal"
+                            aria-hidden="true">×
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal" role="form" onsubmit="filtrate()">
+                        <div class="form-group">
+                            <fieldset class="modal-fieldset">
+                                <legend style="width:100px;">按关注度</legend>
+                                <div class="radio col-md-3">
+                                    <label>
+                                        <input type="radio" name="attention-rate" id="attention-rate1" value="-1" data-sign="1" checked="">
+                                        全部
+                                    </label>
+                                </div>
+                                <div class="radio col-md-3">
+                                    <label>
+                                        <input type="radio" name="attention-rate" id="attention-rate2" value="100000" data-sign="1">
+                                        10亿元以上
+                                    </label>
+                                </div>
+                                <div class="radio col-md-3">
+                                    <label>
+                                        <input type="radio" name="attention-rate" id="attention-rate3" value="5000" data-sign="1">
+                                        5000万元以上
+                                    </label>
+                                </div>
+                                <div class="radio col-md-3">
+                                    <label>
+                                        <input type="radio" name="attention-rate" id="attention-rate4" value="4999" data-sign="-1">
+                                        5000万元以下
+                                    </label>
+                                </div>
+                                <div class="radio col-md-3">
+                                    <label>
+                                        <input type="radio" name="attention-rate" id="attention-rate5" value="0" data-sign="0">
+                                        重点产业项目
+                                    </label>
+                                </div>
+                                <div class="radio col-md-3">
+                                    <label>
+                                        <input type="radio" name="attention-rate" id="attention-rate6" value="100" data-sign="-1">
+                                        基础设施建设
+                                    </label>
+                                </div>
+                                <div class="radio col-md-3">
+                                    <label>
+                                        <input type="radio" name="attention-rate" id="attention-rate7" value="1000" data-sign="1">
+                                        工业项目
+                                    </label>
+                                </div>
+                                <div class="radio col-md-3">
+                                    <label>
+                                        <input type="radio" name="attention-rate" id="attention-rate8" value="100" data-sign="1">
+                                        保障房项目
+                                    </label>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="form-group">
+                            <fieldset class="modal-fieldset">
+                                <legend style="width:180px;">按项目建设类型</legend>
+                                <div class="radio col-md-3">
+                                    <label>
+                                        <input type="radio" name="project_type" id="project_type1" value="-1" checked="">
+                                        全部
+                                    </label>
+                                </div>
+                                <div class="radio col-md-3">
+                                    <label>
+                                        <input type="radio" name="project_type" id="project_type2" value="1">
+                                        新建项目
+                                    </label>
+                                </div>
+                                <div class="radio col-md-3">
+                                    <label>
+                                        <input type="radio" name="project_type" id="project_type3" value="2">
+                                        改建项目
+                                    </label>
+                                </div>
+                                <div class="radio col-md-3">
+                                    <label>
+                                        <input type="radio" name="project_type" id="project_type4" value="3">
+                                        迁建项目
+                                    </label>
+                                </div>
+                                <div class="radio col-md-3">
+                                    <label>
+                                        <input type="radio" name="project_type" id="project_type5" value="4">
+                                        恢复项目
+                                    </label>
+                                </div>
+                                <div class="radio col-md-4">
+                                    <label>
+                                        <input type="radio" name="project_type" id="project_type6" value="5">
+                                        扩建项目
+                                    </label>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="form-group">
+                            <fieldset class="modal-fieldset">
+                                <legend style="width:140px;">财政/民生项目</legend>
+                                <div class="radio col-md-4">
+                                    <label>
+                                        <input type="radio" name="is_msxm_czxm" id="is_msxm_czxm0" value="-1" checked="checked">
+                                        不限
+                                    </label>
+                                </div>
+                                <div class="radio col-md-4">
+                                    <label>
+                                        <input type="radio" name="is_msxm_czxm" id="is_msxm_czxm1" value="is_msxm">
+                                        财政项目
+                                    </label>
+                                </div>
+                                <div class="radio col-md-4">
+                                    <label>
+                                        <input type="radio" name="is_msxm_czxm" id="is_msxm_czxm2" value="is_czxm">
+                                        民生项目
+                                    </label>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-4 col-sm-offset-8 ">
+                                <input type="button" value="查询" class="btn" id="btn-query" onclick="filtrate()">
+                                <input type="reset" value="取消" class="btn" id="btn-clear">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button type="button" class="btn btn-default searchBtn" onclick="removeLi()">全部</button>
+</div>
+<div class="col-xs-5 col-lg-5 col-md-5 content">
+    <ul id="company">
+    </ul>
+</div>
+<div class="col-xs-7 col-lg-7 col-md-7" id="baidu_map"></div>
+
+
+<script src="lib/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+<script type="text/javascript" src="static/js/main.js"></script>
+<script type="text/javascript" src="static/js/method.js"></script>
+</body>
+</html>

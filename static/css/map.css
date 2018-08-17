@@ -1,0 +1,37 @@
+.page-header{
+    margin:0 20px;
+    padding-bottom: 0
+}
+
+.container{
+    pointer-events:none;
+    width: 100%;
+    z-index:2;
+    position:absolute;
+    background: transparent;
+    padding-top: 20px
+}
+
+.dropdown{
+    pointer-events: auto
+}
+
+.btn-group{
+    pointer-events: auto
+}
+
+.table_container{
+    pointer-events:auto;
+    display:none;
+    float:right;
+    height: 300px;
+    width: 300px;
+}
+
+.timeline_container{
+    width: 100%;
+    position:absolute;
+    background: transparent;
+    padding-top:45%;
+    padding-left: 25%
+}

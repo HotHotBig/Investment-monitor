@@ -1,0 +1,390 @@
+* {
+	margin: 0px 0px;
+	padding: 0;
+}
+			a{
+				text-decoration: none;
+				color: black;
+			}
+			.head{
+				background-color: black;
+			}
+			nav {
+				/*设置导航的style*/
+				width: 1280px;
+				height: 40px;
+				margin:0 auto;
+			}
+			
+			#nav-left {
+				/*	使用定位设置盖盒子的右边距*/
+				/*position: relative;
+				left: -24px;*/
+				float: left
+			}
+			
+			#nav-left>ul li {
+				/*设置列表的样式*/
+				list-style: none;
+				float: left;
+				/*line-height: 40px;*/
+				color: white;
+				padding: 0px 10px;
+			}
+			
+			#nav-left>ul li:hover {
+				/*使用伪类设置鼠标效应*/
+				background: green;
+			}
+			
+			#item-nav-right {
+				width: 315px;
+				height: 40px;
+				/*background-color: darkgoldenrod;*/
+				/*margin-left: 130px;*/
+				float: right;
+				/*display: inline-block;*/
+			}
+			
+			#nav-right {
+				float: left;
+			}
+			
+			#nav-right>ul li {
+				display: inline-block;
+				list-style: none;
+				color: white;
+				line-height: 40px;
+				padding: 0px 10px;
+			}
+			
+			#nav-right>ul li:hover {
+				background: #008000;
+			}
+			
+			#qzone {
+				line-height: 40px;
+				float: left;
+				
+			}
+			.position{
+				width: 1280px;
+				margin: 0 auto;
+				margin-top: 51px;
+			}
+			.jquary{
+				background-color: dodgerblue;
+				color: #fff;
+			}
+			.position{
+				display: flex;
+				justify-content: space-between;
+				height: 50px;
+				align-items: center;
+			}
+			.position .right{
+				display: flex;
+				justify-content: space-between;
+				height: 50px;
+				align-items: center;
+			}
+			.position .right>*{
+				margin: 0 7px;
+			}
+			.position .list{
+				font-size: 20px;
+				color: #266296;
+				font-weight: 700;
+				margin: 0 12px;
+			}
+			.position .status{
+				font-weight: 700;
+			}
+			.position select{
+				width: 110px;
+				border-radius: 6px;
+				height: 28px;
+				text-indent: 12px;
+			}
+			.position .gray-border{
+				border: 1px solid #C7C7C7;
+				border-radius: 6px;
+				height: 27px;
+				line-height: 27px;
+				padding: 0 8px;
+				display: inline-block;
+				position: relative;
+				top: 2px;
+				font-size: 14px;
+			}
+			.table-wrap{
+				border: 1px solid #98AFBF;
+				height: 580px;
+				width: 1260px;
+				margin: 0 auto;
+			}
+			table.table{
+				width: 1260px;
+			}
+			table.table th{
+				height: 40px;
+				background: lightblue;
+				border-left: 1px solid #98AFBF;
+				font-size: 14px;
+				text-align:center;
+			}
+			table.table th:nth-of-type(1){
+				border-left: none;
+			}
+			table.table th:nth-of-type(1){
+				width: 80px;
+			}
+			table.table th:nth-of-type(2){
+				width: 70px;
+			}
+			table.table th:nth-of-type(3){
+				width: 90px;
+			}
+			table.table th:nth-of-type(4){
+				width: 90px;
+			}
+			table.table th:nth-of-type(5){
+				width: 70px;
+			}
+			table.table th:nth-of-type(6){
+				width: 80px;
+			}
+			table.table th:nth-of-type(7){
+				width: 100px;
+			}
+			table.table th:nth-of-type(8){
+				width: 90px;
+			}
+			table.table th:nth-of-type(9){
+				width: 110px;
+			}
+			table.table th:nth-of-type(10){
+				width: 200px;
+			}
+			table.table th:nth-of-type(11){
+				width: 70px;
+			}
+			table.table th:nth-of-type(12){
+				width: 100px;
+			}
+			table.table .td{
+				height: 22px;
+				font-size: 14px;
+			}
+			table.table .tr:nth-of-type(2n+1){
+				background-color: lightblue;
+			}
+			/*table.table .tr:hover{
+				background: lightsalmon;
+			}*/
+			.page{
+				text-align: center;
+				margin: 20px 0;
+			}
+			.page button{
+				background: transparent;
+				border:none;
+				color: cornflowerblue;
+				margin: 0 10px;
+			}
+			.add:hover{
+				background: #90F780;
+				color: #fff;
+			}
+			.add:active{
+				background: #D5D6DD;
+				color: #fff;
+			}
+			.active{
+				display: none;
+			}
+			.none{
+				color: darkgray;
+			}
+			.search input{
+				width: 200px;
+				height: 28px;
+				border-radius: 0;
+				border: none;
+				border: 1px solid #C7C7C7;
+				text-indent: 12px;
+			}
+			.search img{
+				position: relative;
+/*				top: 10px;*/
+				height: 30px;
+			}
+			.gaoji{
+				font-size: 16px;
+				position: relative;
+				width: 90px;
+				display: inline-block;
+			}
+			.gaoji img{
+				position: relative;
+				/*top: 6px;*/
+				
+			}
+			.sousuo{
+				position: absolute;
+				border: 2px solid blue;
+				width: 300px;
+				background: #fff;
+				padding: 5px;
+				font-size: 14px;
+				height: 100px;
+				display: none;
+			}
+			.sousuo #close{
+				position: absolute;
+				right: 15px;
+				top: 6px;
+			}
+			.toubu{
+				height: 30px;
+				line-height: 30px;
+				border-bottom: 1px dashed  #000;
+				margin-bottom: 5px;
+			}
+			.all{
+				display:inline-block;
+				height: 20px;
+				background: blue;
+				color: #fff;
+				padding: 0 8px;
+				
+			}
+			.footers{
+				margin-top: 10px;
+				text-align: center;
+			}
+			.footers span:nth-of-type(1){
+				background: blue;
+				color: #fff;
+				padding: 0 8px;
+			}
+			#close{
+				cursor: pointer;
+			}
+			#hidden{
+				width: 90px;
+				height: 30px;
+				display: inline-block;
+				position: absolute;
+				z-index: 5;
+			}
+			.navbar-nav>.active>a{
+            	background-color: #16a085 !important;
+        	}
+        	.navbar-brand,.navbar-nav>li>a{
+            	color: #fff !important;
+        	}
+			.center{
+				width: 1000px;
+				margin: 0 auto;
+			}
+			.center .head{
+				font-size: 22px;
+				font-weight: 700;
+				line-height: 70px;
+			}
+			.main{
+				border: 2px solid #535353;
+				padding: 20px;
+				box-sizing: border-box;
+			}
+			.main .title{
+				overflow: hidden;
+				margin-bottom: 25px;
+			}
+			.main .title .left{
+				float: left;
+				color:cornflowerblue;
+			}
+			.main .title .right{
+				float: right;
+				border-radius: 3px;
+				padding: 3px 8px;
+				color: #fff;
+				background: darkblue;
+			}
+			.main .row{
+				height: 45px;
+			}
+			.main .row .name,.main .row1 .name{
+				display: inline-block;
+				width: 160px;
+				text-align: right;
+				margin-right: 25px;
+			}
+			.main .row .name1{
+				width: 80px;
+				text-align: right;
+				display: inline-block;
+				margin-right: 26px;
+			}
+			.main .row .name3{
+				display: inline-block;
+				width: 180px;
+				text-align: right;
+				margin-right: 25px;
+			}
+			.main .row .name4{
+				display: inline-block;
+				width: 163px;
+				text-align: right;
+			}
+			.main .row .col1{
+				display: inline-block;
+				border: 1px solid #929290;
+				width: 450px;
+				height: 22px;
+				border-radius: 3px;
+				background: #E0E0E0;
+			}
+			.main .row input{
+				border: none;
+			}
+			.main .row input{
+				border: 1px solid #E0E0E0;
+				height: 22px;
+				text-indent: 1em;
+				border-radius: 3px;
+			}
+			.row .input1{
+				width: 760px;
+			}
+			.row .input2{
+				width: 280px;
+			}
+			.row select{
+				width: 122px;
+				border-radius: 3px;
+				height: 22px;
+			}
+			.row .input3{
+				width: 122px;
+			}
+			.row .input4{
+				width: 200px;
+				margin-right: 79px;
+			}
+			.row .input5{
+				width: 200px;
+			}
+			.row1 .name{
+				position: relative;
+				top: -80px;
+			}
+			textarea{
+				width: 760px;
+				height: 80px;
+				border-radius: 3px;
+				text-indent: 1em;
+				padding-top: 10px;
+			}
